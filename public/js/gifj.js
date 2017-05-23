@@ -3,6 +3,8 @@ var trace = function(msg){ console.log(msg); };
 
 var ram;
 
+var gifDisplay;
+
 function pageLoad_init()
 {
 	trace("pageLoad_init();");
@@ -12,9 +14,10 @@ function pageLoad_init()
 
 function build()
 {
+	gifDisplay = document.querySelector("#gif-wrapper .gif-content");
+	
 	ram = {};
 	ram.url = "https://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
-	// ram.data = {};
 
 	data_load(ram.url, data_found);
 }
@@ -47,9 +50,11 @@ function data_found(data)
 
 function gif_use()
 {
-	trace(ram.data.data.length);
+	// var selector = Math.floor(Math.random() * (h - l) + l);
+	var selector = Math.floor(Math.random() * ram.data.data.length);
 
-	var g = ram.data.data[0].images.original.url;
+	var g = ram.data.data[selector].images.downsized_large.url;
 
+	gifDisplay.style.backgroundImage = '"url(' + g + ')"';
 	trace(g);
 }
