@@ -22,7 +22,7 @@ function build()
 	gifDisplay = document.querySelector("#gif-wrapper .gif-content");
 	
 	ram = {};
-	ram.url = "https://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
+	ram.url = "https://api.giphy.com/v1/gifs/search?q=adventure+time&api_key=dc6zaTOxFJmzC";
 
 	data_load(ram.url, data_found);
 }
