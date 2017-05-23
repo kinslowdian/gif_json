@@ -1,6 +1,9 @@
 // DEBUG
 var trace = function(msg){ console.log(msg); };
 
+// REFERENCE
+// https://github.com/Giphy/GiphyAPI
+
 var ram;
 
 var gifDisplay;
