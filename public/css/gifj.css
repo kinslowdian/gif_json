@@ -11,6 +11,11 @@ html, body
 	width: 100%;
 	height: 100%;
 	position: relative;
+
+	background-image: url(../img/static.gif);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .gif-content

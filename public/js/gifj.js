@@ -54,12 +54,21 @@ function data_found(data)
 
 function gif_use()
 {
-	trace("!! gif_use(); !!");
-	// var selector = Math.floor(Math.random() * (h - l) + l);
-	var selector = Math.floor(Math.random() * ram.data.data.length);
+	var delay;
+	var selector;
+	var file;
 
-	var g = ram.data.data[selector].images.downsized_large.url;
+	// selector = Math.floor(Math.random() * (h - l) + l);
+	selector = Math.floor(Math.random() * ram.data.data.length);
 
-	gifDisplay.style.backgroundImage = "url(" + g + ")";
-	trace(g);
+	file = ram.data.data[selector].images.downsized_large.url;
+
+	gifDisplay.style.backgroundImage = "url()";
+
+	delay = setTimeout(gif_add, 200, file);
+}
+
+function gif_add(file)
+{
+	gifDisplay.style.backgroundImage = "url(" + file + ")";
 }
