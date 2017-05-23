@@ -33,7 +33,7 @@ function data_load(file, callback)
 		}
 	};
 
-	xobj.send(null);
+	// xobj.send(null);
 }
 
 function data_found(data)
