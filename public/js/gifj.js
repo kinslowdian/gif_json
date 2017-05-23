@@ -41,4 +41,15 @@ function data_found(data)
 	ram.data = JSON.parse(data);
 
 	trace(ram.data);
+
+	gif_use();
+}
+
+function gif_use()
+{
+	trace(ram.data.data.length);
+
+	var g = ram.data.data[0].images.original.url;
+
+	trace(g);
 }
