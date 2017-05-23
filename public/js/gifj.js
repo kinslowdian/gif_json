@@ -5,6 +5,8 @@ var ram;
 
 var gifDisplay;
 
+var cycle;
+
 function pageLoad_init()
 {
 	trace("pageLoad_init();");
@@ -46,6 +48,8 @@ function data_found(data)
 	trace(ram.data);
 
 	gif_use();
+
+	cycle = setInterval(gif_use, 3 * 1000);
 }
 
 function gif_use()
