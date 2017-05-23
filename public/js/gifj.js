@@ -55,6 +55,6 @@ function gif_use()
 
 	var g = ram.data.data[selector].images.downsized_large.url;
 
-	gifDisplay.style.backgroundImage = '"url(' + g + ')"';
+	gifDisplay.style.backgroundImage = "url(" + g + ")";
 	trace(g);
 }
