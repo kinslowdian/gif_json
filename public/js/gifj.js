@@ -7,6 +7,7 @@ var trace = function(msg){ console.log(msg); };
 var ram;
 
 var gifDisplay;
+var channelNumber;
 
 var cycle;
 
@@ -20,7 +21,8 @@ function pageLoad_init()
 function build()
 {
 	gifDisplay = document.querySelector("#gif-wrapper .gif-content");
-	
+	channelNumber = document.querySelector("#gif-wrapper .channel");
+
 	ram = {};
 	ram.url = "https://api.giphy.com/v1/gifs/search?q=adventure+time&api_key=dc6zaTOxFJmzC";
 
@@ -60,6 +62,7 @@ function gif_use()
 	var delay;
 	var selector;
 	var file;
+	var channelString = "";
 
 	// selector = Math.floor(Math.random() * (h - l) + l);
 	selector = Math.floor(Math.random() * ram.data.data.length);
@@ -67,6 +70,19 @@ function gif_use()
 	file = ram.data.data[selector].images.downsized_large.url;
 
 	gifDisplay.style.backgroundImage = "url()";
+	gifDisplay.classList.add("gif-hide");
+
+	if(selector < 10)
+	{
+		channelString = "0" + selector;
+	}
+
+	else
+	{
+		channelString = selector;
+	}
+
+	channelNumber.innerHTML = channelString;
 
 	delay = setTimeout(gif_add, 200, file);
 }
@@ -74,4 +90,5 @@ function gif_use()
 function gif_add(file)
 {
 	gifDisplay.style.backgroundImage = "url(" + file + ")";
+	gifDisplay.classList.remove("gif-hide");
 }

@@ -16,6 +16,8 @@ html, body
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+
+	font-size: 100px;
 }
 
 .gif-content
@@ -26,4 +28,30 @@ html, body
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+.fx-grain
+{
+	-webkit-filter: grayscale(40%) brightness(60%) contrast(150%);
+	filter: grayscale(40%) brightness(60%) contrast(150%);
+}
+
+.gif-hide
+{
+	visibility: hidden;
+}
+
+.channel
+{
+	position: absolute;
+	top: 20px; right: 20px;
+	text-align: right;
+	color: #fff;
+	display: block;
+	background: blue;
+	padding: 10px;
+
+	font-family: sans-serif;
+	font-size: 1em;
+	font-weight: bolder;
 }
