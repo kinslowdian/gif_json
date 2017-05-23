@@ -54,6 +54,7 @@ function data_found(data)
 
 function gif_use()
 {
+	trace("!! gif_use(); !!");
 	// var selector = Math.floor(Math.random() * (h - l) + l);
 	var selector = Math.floor(Math.random() * ram.data.data.length);
 
