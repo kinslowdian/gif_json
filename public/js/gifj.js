@@ -14,7 +14,7 @@ function build()
 {
 	ram = {};
 	ram.url = "https://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC";
-	ram.data = {};
+	// ram.data = {};
 
 	data_load(ram.url, data_found);
 }
