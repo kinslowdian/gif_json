@@ -72,6 +72,7 @@ function gif_use()
 
 	gifDisplay.style.backgroundImage = "url()";
 	gifDisplay.classList.add("gif-hide");
+	channelNumber.classList.remove("gif-hide");
 
 	if(selector < 10)
 	{
@@ -90,6 +91,17 @@ function gif_use()
 
 function gif_add(file)
 {
+	var delay;
+
 	gifDisplay.style.backgroundImage = "url(" + file + ")";
 	gifDisplay.classList.remove("gif-hide");
+
+	delay = setTimeout(gif_addExtra, 1 * 1000);
 }
+
+function gif_addExtra()
+{
+	channelNumber.classList.add("gif-hide");	
+}
+
+

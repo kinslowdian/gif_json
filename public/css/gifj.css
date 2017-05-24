@@ -57,7 +57,20 @@ html, body
 	font-family: sans-serif;
 	font-size: 1em;
 	font-weight: bolder;
+
+	transform-origin: 50% 50%;
+
+	animation: channelFrames 100ms linear infinite;
 }
+
+@keyframes channelFrames
+{
+	0%		{transform: scale(1);}
+	50%		{transform: scale(0.99);}
+	100%	{transform: scale(1);}
+}
+
+
 
 .screen-fx
 {
