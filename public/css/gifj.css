@@ -43,6 +43,11 @@ html, body
 	visibility: hidden;
 }
 
+.tween-fix
+{
+	backface-visibility: hidden;
+}
+
 .channel
 {
 	position: absolute;
