@@ -24,8 +24,8 @@ function build()
 	channelNumber = document.querySelector("#gif-wrapper .channel");
 
 	ram = {};
-	ram.url = "https://api.giphy.com/v1/gifs/search?q=adventure+time&api_key=dc6zaTOxFJmzC";
-	// ram.url = "https://api.giphy.com/v1/gifs/search?q=alan+partridge&api_key=dc6zaTOxFJmzC";
+	// ram.url = "https://api.giphy.com/v1/gifs/search?q=adventure+time&api_key=dc6zaTOxFJmzC";
+	ram.url = "https://api.giphy.com/v1/gifs/search?q=david+brent&api_key=dc6zaTOxFJmzC";
 
 	data_load(ram.url, data_found);
 }
